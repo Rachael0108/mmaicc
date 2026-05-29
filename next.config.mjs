@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  output: "export",
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: process.env.NEXT_IMAGE_UNOPTIMIZED === "true"
-  }
+    unoptimized: process.env.NEXT_IMAGE_UNOPTIMIZED === "true",
+  },
 };
 
 export default nextConfig;

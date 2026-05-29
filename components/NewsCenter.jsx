@@ -149,7 +149,7 @@ export default function NewsCenter() {
                   <a
                     key={article.id}
                     className="news-center-card"
-                    href={`/newsDetail?id=${article.id}`}
+                    href={`/newsDetail/${article.id}`}
                   >
                     <div className="news-center-cover">
                       {article.image ? (
