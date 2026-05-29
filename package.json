@@ -1,0 +1,20 @@
+{
+  "name": "next-maicc-official",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "dev": "node scripts/next-runner.mjs dev",
+    "build": "node scripts/next-runner.mjs build",
+    "start": "node scripts/next-runner.mjs start",
+    "lint": "node scripts/next-runner.mjs lint"
+  },
+  "dependencies": {
+    "jsencrypt": "^3.5.4",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

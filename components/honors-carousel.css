@@ -1,0 +1,284 @@
+/* ─── 3D 轮播容器 ─── */
+.honors-carousel-3d {
+  width: 100%;
+  padding: 48px 0 56px;
+  position: relative;
+  /* 隐藏圆环两侧溢出的卡片 */
+  /* overflow: hidden; */
+}
+
+/* 外层弹性行：箭头 + 舞台 */
+.carousel-3d-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── 3D 舞台 ─── */
+.carousel-3d-stage {
+  flex: 1;
+  height: 380px;
+  /* perspective 决定纵深感：值越小透视越强 */
+  perspective: 2000px;
+  overflow: visible;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.carousel-3d-stage:active {
+  cursor: grabbing;
+}
+
+/* 整个圆环转盘 */
+.carousel-3d-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── 单张卡片 ─── */
+.honor-card-3d {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 300px;
+  margin-left: -120px;
+  margin-top: -150px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  /* 每张卡自身的过渡：亮度 / 缩放由 is-active 控制 */
+  transition:
+    filter 0.7s ease,
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 非激活卡片压暗 */
+  filter: brightness(0.7) saturate(0.6);
+  /* transform 由内联 style 提供，这里只补充 scale */
+}
+
+/* 激活卡片恢复亮度 + 轻微放大 */
+.honor-card-3d.is-active {
+  filter: brightness(1) saturate(1);
+  /* 叠加放大：原有的 rotateY+translateZ 由 style 给出，
+     这里用 CSS 变量技巧避免覆盖，改在 inner 上缩放 */
+}
+
+/* 卡片正面内容 */
+.honor-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.575) 100%
+  );
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  transition:
+    background 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* 激活卡片：渐变高亮 */
+.honor-card-3d.is-active .honor-card-inner {
+  background: linear-gradient(145deg, #ff3324 0%, #fa675d 100%);
+  box-shadow:
+    0 24px 56px #ff33246c,
+    0 0 0 2px rgba(255, 255, 255, 0.25) inset;
+  transform: scale(1.06);
+}
+
+/* 鼠标悬停非激活卡片 */
+@media (hover: hover) {
+  .honor-card-3d:not(.is-active):hover .honor-card-inner {
+    transform: scale(1.03);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* ─── 图标 ─── */
+.honor-icon-wrap-3d {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.honor-icon-wrap-3d svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 非激活图标：品牌色 */
+.honor-card-3d:not(.is-active) .honor-icon-wrap-3d svg {
+  stroke: #ff3324;
+}
+
+/* 激活图标：纯白 */
+.honor-card-3d.is-active .honor-icon-wrap-3d svg {
+  stroke: #fff;
+}
+
+/* ─── 文字 ─── */
+.honor-title-3d {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+
+.honor-card-3d:not(.is-active) .honor-title-3d {
+  color: #1a1a2e;
+}
+
+.honor-card-3d.is-active .honor-title-3d {
+  color: #fff;
+}
+
+.honor-desc-3d {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 190px;
+}
+
+.honor-card-3d:not(.is-active) .honor-desc-3d {
+  color: #555;
+}
+
+.honor-card-3d.is-active .honor-desc-3d {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ─── 导航箭头 ─── */
+.nav-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s;
+  color: #ff3324;
+  z-index: 10;
+}
+
+.nav-btn:hover {
+  background: #ff3324;
+  color: #fff;
+  box-shadow: 0 6px 20px #ff332453;
+  transform: scale(1.08);
+}
+
+.nav-btn:active {
+  transform: scale(0.94);
+}
+
+/* ─── 圆点指示器 ─── */
+.honors-dots-3d {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.honors-dot-3d {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: #fedbd9;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.25s,
+    width 0.25s,
+    border-radius 0.25s,
+    transform 0.2s;
+}
+
+.honors-dot-3d.is-active {
+  width: 26px;
+  border-radius: 5px;
+  background: #ff3324;
+}
+
+.honors-dot-3d:hover:not(.is-active) {
+  background: #ff3324;
+  transform: scale(1.25);
+}
+
+/* ─── 响应式 ─── */
+@media (max-width: 768px) {
+  .carousel-3d-stage {
+    height: 320px;
+  }
+
+  .honor-card-3d {
+    width: 200px;
+    height: 260px;
+    margin-left: -100px;
+    margin-top: -130px;
+  }
+
+  .honor-card-inner {
+    padding: 24px 14px;
+    border-radius: 18px;
+  }
+
+  .honor-icon-wrap-3d {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+  }
+
+  .honor-title-3d {
+    font-size: 15px;
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-3d-container {
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .honor-card-3d {
+    width: 180px;
+    height: 240px;
+    margin-left: -90px;
+    margin-top: -120px;
+  }
+}

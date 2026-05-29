@@ -1,0 +1,10 @@
+node_modules
+.next
+.npm-cache
+out
+dist
+*.log
+playwright-*.png
+.env*.local
+docker_build
+docker_build.zip

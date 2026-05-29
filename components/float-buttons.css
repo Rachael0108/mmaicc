@@ -1,0 +1,130 @@
+.rgt-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 5%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rgt-btn .rgt-item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #f03b58 0%, #e11838 70%, #c90f2b 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(225, 24, 56, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.rgt-btn .rgt-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(225, 24, 56, 0.38);
+}
+
+.rgt-btn .rgt-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(225, 24, 56, 0.25);
+}
+
+.rgt-btn .rgt-item svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* 未读角标 */
+.rgt-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #ffcc33 0%, #ff8800 100%);
+  color: #4d1f00;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0 6px;
+  line-height: 16px;
+  box-shadow: 0 2px 8px rgba(255, 136, 0, 0.4);
+}
+
+/* 电话悬浮提示 */
+.rgt-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  white-space: nowrap;
+  background: #1f2937;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.rgt-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: #1f2937;
+}
+
+.rgt-phone:hover .rgt-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* 回到顶部：滚动后才出现 */
+.rgt-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.rgt-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 手机样式 */
+@media only screen and (max-width: 767px) {
+  .rgt-btn {
+    right: 14px;
+    bottom: 8%;
+    gap: 8px;
+  }
+
+  .rgt-btn .rgt-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .rgt-btn .rgt-item svg {
+    width: 18px;
+    height: 18px;
+  }
+}

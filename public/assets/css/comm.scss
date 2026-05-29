@@ -1,0 +1,193 @@
+//默认
+$text1:var(--text1,34px);
+$text2:var(--text2,20px);
+$text3:var(--text3,16px);
+$text4:var(--text4,14px);
+$primary:var(--primary,#2d6dff);
+
+// @mixin text1($isMobile:$isMobile) {
+// 	// @if $isMobile == "yidong" {
+// 		background: $primary;
+// 	// } @else {}
+// };
+//_themes.scss
+//当HTML的data-theme为dark时，样式引用dark
+//data-theme为其他值时，就采用组件库的默认样式
+// 主题颜色更改-主题列表
+// 
+$themes:(
+light: (
+	bg:#2d6dff,
+	botton-bg:linear-gradient(to bottom, #7dc7ff, #3475ff),
+	botton-bg-hover: linear-gradient(to bottom, #71b5e6, #2d69df),
+	botton-bg-active:linear-gradient(to bottom, #7cc9fc, #2150a8),
+	text-color:#ffffff,
+	primary-bg:#2161f1,
+	primary-color:#fff,
+	big-bg:#2161f1,
+	big-color:#fff,
+),
+dark: (
+	bg:#333000,
+	botton-bg:linear-gradient(to bottom, #550000, #270076),
+	botton-bg-hover: linear-gradient(to bottom, #00ff7f, #2d69df),
+	botton-bg-active:linear-gradient(to bottom, #ffff00, #2150a8),
+	text-color:#fff,
+	primary-bg:#333000,
+	primary-color:#fff,
+	big-bg:#222000,
+	big-color:#fff,
+),
+defa:(
+	bg:rgba(0,0,0,0),
+	botton-bg:linear-gradient(to bottom, #7dc7ff, #3475ff),
+	botton-bg-hover: linear-gradient(to bottom, #71b5e6, #2d69df),
+	botton-bg-active:linear-gradient(to bottom, #7cc9fc, #2150a8),
+	text-color:#333,
+	primary-bg:#2161f1,
+	primary-color:#fff,
+	big-bg:#2161f1,
+	big-color:#fff,
+),
+// 柔和、洁净、爽朗
+rh:(
+	//body 背景色 
+	bg:#cef1ff,
+	// 按钮背景色
+	botton-bg:linear-gradient(to bottom, #7dc7ff, #3475ff),
+	botton-bg-hover: linear-gradient(to bottom, #71b5e6, #2d69df),
+	botton-bg-active:linear-gradient(to bottom, #7cc9fc, #2150a8),
+	// 文字颜色
+	text-color:#555,
+	// 没用到
+	primary-bg:#CCFF99,
+	// 没用到
+	primary-color:#fff,
+	// 最下面一行的背景颜色
+	big-bg:#99CCFF,
+	// 最下面一行的字体颜色
+	big-color:#333,
+)
+);
+@import "./themeify.scss";
+
+:export {
+	// 主题更改时 主要颜色更改
+	primary:#2d6dff;
+	lightBg:#2d6dff;
+	defaBg:#2d6dff;
+	darkBg:#333000;
+	rhBg:#00dada;
+}
+
+.el-dialog__header, .el-message-box__header {
+	background-color: #526ab1;
+	.el-dialog__title{
+		color: #fff;
+	}
+}
+// 隐藏原生滚动条
+::-webkit-scrollbar {
+	display: none !important;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1 !important;
+}
+::-webkit-scrollbar-thumb {
+	background: #c1c1c1 !important;
+	border-radius: 2px !important;
+}
+
+.theme-animate-button {
+  transform: skew(-20deg);
+  button {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #fff;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+
+button > div,
+button > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+button .clone > *,
+button .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+button .clone > * {
+  transform: translateY(60px);
+}
+
+button:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+button:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+button:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+button:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+button:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+button svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: 0.2s ease-out;
+}
+
+button:hover svg {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+}

@@ -1,0 +1,34 @@
+.title {
+  padding: 20px 0;
+  z-index: 100;
+  position: relative;
+  text-align: center;
+}
+.title-text {
+  justify-content: center;
+  font-size: 24px;
+  padding: 0 80px;
+  line-height: 50px;
+  position: relative;
+  display: inline-block;
+}
+.title-text::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: calc(50% - 25px);
+  left: 0;
+  /* background: url(../../img/a/12.png) 50% 50% no-repeat; */
+  background-size: 50px 50px;
+}
+.title-text::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  width: 50px;
+  height: 50px;
+  /* background: url(../../img/a/12.png) 50% 50% no-repeat; */
+  background-size: 50px 50px;
+}
