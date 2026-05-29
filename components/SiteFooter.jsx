@@ -19,7 +19,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-top">
-          <img src="/assets/img/a/logo-white.png" alt="米鹊科技" />
+          <img src="/mmaicc/assets/img/a/logo-white.png" alt="米鹊科技" />
           <span>精准守护每一次康复</span>
         </div>
         <div className="footer-grid">
@@ -35,11 +35,11 @@ export default function SiteFooter() {
             <h3>关注米鹊科技</h3>
             <div className="qr-row">
               <figure>
-                <img src="/assets/pics/gzh.jpg" alt="官方公众号二维码" />
+                <img src="/mmaicc/assets/pics/gzh.jpg" alt="官方公众号二维码" />
                 <figcaption>官方公众号</figcaption>
               </figure>
               <figure>
-                <img src="/assets/pics/red_book.png" alt="小红书二维码" />
+                <img src="/mmaicc/assets/pics/red_book.png" alt="小红书二维码" />
                 <figcaption>小红书</figcaption>
               </figure>
             </div>

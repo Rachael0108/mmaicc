@@ -11,7 +11,7 @@ export default function AiPage() {
       <main>
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/img/ai/bg/bg1.png")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/img/ai/bg/bg1.png")' }}
         >
           <div className="hero-inner">
             <p>AI 电话随访机器人</p>
@@ -34,7 +34,7 @@ export default function AiPage() {
               </p>
             </div>
             <div className="media-frame">
-              <img src="/assets/img/ai/fl8/img1.png" alt="AI 随访能力展示" />
+              <img src="/mmaicc/assets/img/ai/fl8/img1.png" alt="AI 随访能力展示" />
             </div>
           </div>
         </section>
@@ -57,8 +57,8 @@ export default function AiPage() {
           <div className="container split">
             <div className="media-frame">
               <video
-                src="/assets/video/ai/home-ai-video.mp4"
-                poster="/assets/img/ai/bg/video.png"
+                src="/mmaicc/assets/video/ai/home-ai-video.mp4"
+                poster="/mmaicc/assets/img/ai/bg/video.png"
                 controls
                 muted
                 playsInline

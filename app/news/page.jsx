@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import { newsItems } from "@/lib/site-data";
 
@@ -11,7 +12,7 @@ export default function NewsPage() {
       <main>
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/pics/bg_09.png")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/pics/bg_09.png")' }}
         >
           <div className="hero-inner">
             {/* <p className="eyebrow">新闻资讯</p> */}
@@ -24,7 +25,7 @@ export default function NewsPage() {
           <div className="container">
             <div className="news-list">
               {newsItems.map((item, index) => (
-                <a
+                <Link
                   className="card news-card"
                   href={`/newsDetail?index=${index}`}
                   key={item.title}
@@ -35,7 +36,7 @@ export default function NewsPage() {
                     <h3>{item.title}</h3>
                     <p>{item.summary}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

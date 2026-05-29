@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 import { queryNewsMaterialList, allMaterial } from "@/lib/api";
 
 const COMPANY_ID = 1;
@@ -146,7 +147,7 @@ export default function NewsCenter() {
             {activeArticles.length > 0 ? (
               <div className="news-center-cards">
                 {activeArticles.map((article) => (
-                  <a
+                  <Link
                     key={article.id}
                     className="news-center-card"
                     href={`/newsDetail/${article.id}`}
@@ -180,7 +181,7 @@ export default function NewsCenter() {
                         </svg>
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             ) : (

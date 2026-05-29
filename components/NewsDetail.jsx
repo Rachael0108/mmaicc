@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {
   queryNewsMaterialList,
   allMaterial,
@@ -145,9 +146,9 @@ export default function NewsDetail({ id }) {
       <section className="section">
         <div className="container">
           <p className="news-detail-state">未找到相关文章</p>
-          <a className="news-detail-back" href="/news">
+          <Link className="news-detail-back" href="/news">
             ← 返回新闻资讯
-          </a>
+          </Link>
         </div>
       </section>
     );
@@ -157,9 +158,9 @@ export default function NewsDetail({ id }) {
     <section className="section">
       <div className="container">
         <article className="detail-article">
-          <a className="news-detail-back" href="/news">
+          <Link className="news-detail-back" href="/news">
             ← 返回新闻资讯
-          </a>
+          </Link>
           {article.date ? <p className="eyebrow">{article.date}</p> : null}
           <h2>{article.title}</h2>
           {article.image ? (

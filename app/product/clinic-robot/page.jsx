@@ -3,26 +3,26 @@
 import PageShell from "@/components/PageShell";
 import Image from "next/image";
 
-const CHECK_ICON = "/assets/img/ai/fl4/icon.png";
+const CHECK_ICON = "/mmaicc/assets/img/ai/fl4/icon.png";
 
 const fl2List = [
   {
-    iconUrl: "/assets/img/ai/fl2/1.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl2/1.png",
     title: "7×24 小时在线",
     subtitle: "全天候秒级接听，告别占线与等待，接通率提升至 99% 以上。",
   },
   {
-    iconUrl: "/assets/img/ai/fl2/2.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl2/2.png",
     title: "医院专属知识库",
     subtitle: "深度集成挂号、就诊流程、医保政策等高频问题，应答精准可靠。",
   },
   {
-    iconUrl: "/assets/img/ai/fl2/3.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl2/3.png",
     title: "深度语义理解",
     subtitle: "支持多轮追问与模糊表述，听懂方言口音，理解患者真实诉求。",
   },
   {
-    iconUrl: "/assets/img/ai/fl2/4.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl2/4.png",
     title: "温暖人性应答",
     subtitle: "拟人化语音交互，复杂问题无缝转接人工，服务有温度。",
   },
@@ -30,11 +30,11 @@ const fl2List = [
 
 const fl4List = [
   {
-    iconUrl: "/assets/img/ai/fl4/phone-ai.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl4/phone-ai.png",
     title: "智能分诊",
   },
   {
-    iconUrl: "/assets/img/ai/fl4/search.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl4/search.png",
     title: "号源查询",
   },
   {
@@ -42,34 +42,34 @@ const fl4List = [
     isFeature: true,
   },
   {
-    iconUrl: "/assets/img/ai/fl4/question.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl4/question.png",
     title: "医保咨询",
   },
   {
-    iconUrl: "/assets/img/ai/fl4/learn.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl4/learn.png",
     title: "知识问答",
   },
   {
-    iconUrl: "/assets/img/ai/fl4/customer.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl4/customer.png",
     title: "人工转接",
   },
 ];
 
 const fl5List = [
   {
-    iconUrl: "/assets/img/ai/fl5/1.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl5/1.png",
     title: "本地模型",
     content1: "高频固定问题本地秒级响应，数据不出院，安全合规。",
     content2: "低成本运行，稳定可靠，无需依赖外部网络。",
   },
   {
-    iconUrl: "/assets/img/ai/fl5/2.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl5/2.png",
     title: "千亿参数大模型",
     content1: "复杂、开放式问题交由大模型推理，应答更自然灵活。",
     content2: "持续学习医院业务场景，能力不断进化。",
   },
   {
-    iconUrl: "/assets/img/ai/fl5/3.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl5/3.png",
     title: "双引擎调度",
     content1: "智能路由本地与云端能力，兼顾响应速度与回答质量。",
     content2: "",
@@ -78,22 +78,22 @@ const fl5List = [
 
 const fl6List = [
   {
-    iconUrl: "/assets/img/ai/fl6/left-top.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl6/left-top.png",
     title: "零改造接入",
     content: "无需改造现有 HIS、电话系统，即插即用快速上线。",
   },
   {
-    iconUrl: "/assets/img/ai/fl6/right-top.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl6/right-top.png",
     title: "灵活部署",
     content: "支持本地化，移动灵活部署，突发需求，可随时转移设备。",
   },
   {
-    iconUrl: "/assets/img/ai/fl6/right-bottom.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl6/right-bottom.png",
     title: "数据安全",
     content: "全链路加密，患者隐私数据本地存储，满足等保要求。",
   },
   {
-    iconUrl: "/assets/img/ai/fl6/left-bottom.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl6/left-bottom.png",
     title: "便捷运维",
     content: "可视化后台管理，知识库一键更新，移动运维方便高效。",
   },
@@ -101,19 +101,19 @@ const fl6List = [
 
 const fl8List = [
   {
-    imgUrl: "/assets/img/ai/fl8/img1.png",
+    imgUrl: "/mmaicc/assets/img/ai/fl8/img1.png",
     title: "复旦大学附属肿瘤医院",
     phoneTimes: "3000+",
     knowledge: "1200+",
   },
   {
-    imgUrl: "/assets/img/ai/fl8/img2.png",
+    imgUrl: "/mmaicc/assets/img/ai/fl8/img2.png",
     title: "海军军医大学第一附属医院",
     phoneTimes: "2500+",
     knowledge: "1000+",
   },
   {
-    imgUrl: "/assets/img/ai/fl8/img3.png",
+    imgUrl: "/mmaicc/assets/img/ai/fl8/img3.png",
     title: "江苏省苏州市立医院",
     phoneTimes: "1800+",
     knowledge: "800+",
@@ -122,17 +122,17 @@ const fl8List = [
 
 const fl9List = [
   {
-    iconUrl: "/assets/img/ai/fl9/1.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl9/1.png",
     title: "提升患者满意度",
     describe: "电话不再难打，问题快速解决，就医体验显著改善。",
   },
   {
-    iconUrl: "/assets/img/ai/fl9/2.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl9/2.png",
     title: "释放人力成本",
     describe: "AI 承担大量重复咨询，让客服人员专注高价值服务。",
   },
   {
-    iconUrl: "/assets/img/ai/fl9/3.png",
+    iconUrl: "/mmaicc/assets/img/ai/fl9/3.png",
     title: "沉淀服务数据",
     describe: "通话内容结构化留存，为门诊运营决策提供数据支撑。",
   },
@@ -144,7 +144,7 @@ export default function ClinicRobotPage() {
       <main className="clinic-robot-page">
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/img/ai/bg/bg1.png")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/img/ai/bg/bg1.png")' }}
         >
           <div className="hero-inner">
             <h1>米鹊门诊智能语音机器人</h1>
@@ -182,7 +182,7 @@ export default function ClinicRobotPage() {
           </div>
           <div className="cr-fl3-con">
             <Image
-              src="/assets/img/ai/fl3/content.png"
+              src="/mmaicc/assets/img/ai/fl3/content.png"
               alt="智能接听工作流程"
               width={1180}
               height={420}
@@ -201,7 +201,7 @@ export default function ClinicRobotPage() {
                 <div className="left-con">
                   <div className="left-img">
                     <Image
-                      src="/assets/img/ai/fl4/phone-ai.png"
+                      src="/mmaicc/assets/img/ai/fl4/phone-ai.png"
                       alt="智能应答"
                       width={220}
                       height={220}
@@ -303,7 +303,7 @@ export default function ClinicRobotPage() {
             ))}
             <div className="item-middle">
               <Image
-                src="/assets/img/ai/fl6/middle.png"
+                src="/mmaicc/assets/img/ai/fl6/middle.png"
                 alt=""
                 width={360}
                 height={360}
@@ -318,13 +318,13 @@ export default function ClinicRobotPage() {
         >
           <div className="cr-fl7-con">
             <video
-              poster="/assets/img/ai/bg/video.png"
+              poster="/mmaicc/assets/img/ai/bg/video.png"
               controls
               playsInline
               style={{ borderRadius: 20, width: "100%" }}
             >
               <source
-                src="/assets/video/ai/home-ai-video.mp4"
+                src="/mmaicc/assets/video/ai/home-ai-video.mp4"
                 type="video/mp4"
               />
             </video>

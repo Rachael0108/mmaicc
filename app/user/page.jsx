@@ -7,36 +7,36 @@ export const metadata = {
 const cases = [
   {
     title: "三级医院院后随访体系",
-    image: "/assets/pics/pro_06.jpg",
+    image: "/mmaicc/assets/pics/pro_06.jpg",
     text: "围绕重点专科和出院患者建立标准化随访路径，提升随访完成率和异常发现效率。",
   },
   {
     title: "民营医院患者运营",
-    image: "/assets/pics/pro_07.jpg",
+    image: "/mmaicc/assets/pics/pro_07.jpg",
     text: "将复诊提醒、健康宣教和满意度调研纳入统一平台，提升患者服务体验。",
   },
   {
     title: "专科慢病管理",
-    image: "/assets/pics/bg_11.jpg",
+    image: "/mmaicc/assets/pics/bg_11.jpg",
     text: "通过长期指标记录、风险分层和定期干预，支持慢病患者持续管理。",
   },
 ];
 
 const partnerLogos = [
-  { name: "复旦大学附属浦东医院", logo: "/assets/logos/logo1.png" },
-  { name: "复旦大学附属中山医院", logo: "/assets/logos/logo-08.png" },
-  { name: "复旦大学附属肿瘤医院", logo: "/assets/logos/logo-03.png" },
+  { name: "复旦大学附属浦东医院", logo: "/mmaicc/assets/logos/logo1.png" },
+  { name: "复旦大学附属中山医院", logo: "/mmaicc/assets/logos/logo-08.png" },
+  { name: "复旦大学附属肿瘤医院", logo: "/mmaicc/assets/logos/logo-03.png" },
   { name: "复旦大学附属妇产科医院", logo: null },
-  { name: "同济大学附属第一妇婴保健院", logo: "/assets/logos/logo6.png" },
+  { name: "同济大学附属第一妇婴保健院", logo: "/mmaicc/assets/logos/logo6.png" },
   {
     name: "海军军医大学第一附属医院（上海长海医院）",
-    logo: "/assets/logos/logo-04.png",
+    logo: "/mmaicc/assets/logos/logo-04.png",
   },
   { name: "江苏省苏州市立医院", logo: null },
   { name: "苏州市妇幼保健院", logo: null },
-  { name: "山东省济南市人民医院", logo: "/assets/logos/logo4.png" },
+  { name: "山东省济南市人民医院", logo: "/mmaicc/assets/logos/logo4.png" },
   { name: "江西省赣州市人民医院", logo: null },
-  { name: "苏州九龙医院", logo: "/assets/logos/logo3.png" },
+  { name: "苏州九龙医院", logo: "/mmaicc/assets/logos/logo3.png" },
   { name: "新疆维吾尔族自治区第三人民医院", logo: null },
 ];
 
@@ -46,7 +46,7 @@ export default function UserPage() {
       <main>
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/pics/bg_10.jpg")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/pics/bg_10.jpg")' }}
         >
           <div className="hero-inner">
             <p>预问诊精准分流，院后管理全程守护</p>

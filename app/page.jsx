@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import HonorsCarousel from "@/components/HonorsCarousel";
 import NewsCenter from "@/components/NewsCenter";
@@ -128,7 +129,7 @@ export default function HomePage() {
       <main>
         <section
           className="hero"
-          style={{ "--hero-image": 'url("/assets/pics/bg_01.webp")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/pics/bg_01.webp")' }}
         >
           <div className="hero-inner">
             <h1 className="hero-headline">
@@ -141,12 +142,12 @@ export default function HomePage() {
               AI赋能医疗机构，让院后管理从负担变成增量
             </p>
             <div className="button-row">
-              <a className="btn" href="/product">
+              <Link className="btn" href="/product">
                 查看解决方案
-              </a>
-              <a className="btn secondary" href="/aboutUs">
+              </Link>
+              <Link className="btn secondary" href="/aboutUs">
                 了解米鹊科技
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -294,7 +295,7 @@ export default function HomePage() {
               </div>
             ))}
             <div className="partner-more-row">
-              <a href="/user" className="partner-more-link">
+              <Link href="/user" className="partner-more-link">
                 点击查看更多合作医院
                 <svg
                   width="16"
@@ -308,7 +309,7 @@ export default function HomePage() {
                 >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

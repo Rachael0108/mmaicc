@@ -171,7 +171,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" onClick={() => setOpen(false)}>
-        <img src="/assets/img/a/logo-black.png" alt="米鹊科技" />
+        <img src="/mmaicc/assets/img/a/logo-black.png" alt="米鹊科技" />
       </Link>
       <button
         className="menu-toggle"

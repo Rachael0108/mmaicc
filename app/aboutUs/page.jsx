@@ -17,7 +17,7 @@ export default function AboutPage() {
       <main>
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/pics/bg_01.webp")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/pics/bg_01.webp")' }}
         >
           <div className="hero-inner">
             {/* <p className="eyebrow">关于米鹊科技</p> */}
@@ -41,7 +41,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="media-frame">
-              <img src="/assets/pics/bg_address.webp" alt="米鹊科技办公环境" />
+              <img src="/mmaicc/assets/pics/bg_address.webp" alt="米鹊科技办公环境" />
             </div>
           </div>
         </section>
@@ -69,9 +69,9 @@ export default function AboutPage() {
             </p>
             <div className="grid three" style={{ marginTop: "32px" }}>
               {[
-                "/assets/pics/02.png",
-                "/assets/pics/01.png",
-                "/assets/pics/03.png",
+                "/mmaicc/assets/pics/02.png",
+                "/mmaicc/assets/pics/01.png",
+                "/mmaicc/assets/pics/03.png",
               ].map((src) => (
                 <div className="media-frame space-stars" key={src}>
                   <img src={src} alt="技术实力" />
@@ -88,7 +88,7 @@ export default function AboutPage() {
               className="grid three brand-band-bg"
               style={{
                 marginTop: "32px",
-                "--brand-image": 'url("/assets/img/d/16.png")',
+                "--brand-image": 'url("/mmaicc/assets/img/d/16.png")',
               }}
             >
               <div className="culture-card">

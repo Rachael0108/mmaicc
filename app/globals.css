@@ -249,7 +249,7 @@ textarea {
       rgba(10, 13, 24, 0.55),
       rgba(10, 13, 24, 0.22)
     ),
-    var(--hero-image, url("/img/a/index.png")) top / cover no-repeat;
+    var(--hero-image, url("/mmaicc/img/a/index.png")) top / cover no-repeat;
 }
 
 .hero::after {

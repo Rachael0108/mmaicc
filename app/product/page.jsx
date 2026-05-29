@@ -6,15 +6,15 @@ import { useState } from "react";
 import Image from "next/image";
 
 const tabItems = [
-  { label: "个性化随访方案", img: "/assets/img/pro/six/1.png" },
-  { label: "300+专病随访量表", img: "/assets/img/pro/six/2.png" },
-  { label: "强制可信通话", img: "/assets/img/pro/six/3.png" },
-  { label: "精准专病健康宣教", img: "/assets/img/pro/six/4.png" },
-  { label: "在线健康资讯", img: "/assets/img/pro/six/5.png" },
-  { label: "AI症状识别", img: "/assets/img/pro/six/6.png" },
-  { label: "患者永久个人健康档案", img: "/assets/img/pro/six/7.png" },
-  { label: "智慧营销服务", img: "/assets/img/pro/six/8.png" },
-  { label: "全托管运营服务", img: "/assets/img/pro/six/9.png" },
+  { label: "个性化随访方案", img: "/mmaicc/assets/img/pro/six/1.png" },
+  { label: "300+专病随访量表", img: "/mmaicc/assets/img/pro/six/2.png" },
+  { label: "强制可信通话", img: "/mmaicc/assets/img/pro/six/3.png" },
+  { label: "精准专病健康宣教", img: "/mmaicc/assets/img/pro/six/4.png" },
+  { label: "在线健康资讯", img: "/mmaicc/assets/img/pro/six/5.png" },
+  { label: "AI症状识别", img: "/mmaicc/assets/img/pro/six/6.png" },
+  { label: "患者永久个人健康档案", img: "/mmaicc/assets/img/pro/six/7.png" },
+  { label: "智慧营销服务", img: "/mmaicc/assets/img/pro/six/8.png" },
+  { label: "全托管运营服务", img: "/mmaicc/assets/img/pro/six/9.png" },
 ];
 
 export function ProductTabs() {
@@ -52,7 +52,7 @@ export default function ProductPage() {
       <main>
         <section
           className="hero page-hero"
-          style={{ "--hero-image": 'url("/assets/img/pro/bg/1.png")' }}
+          style={{ "--hero-image": 'url("/mmaicc/assets/img/pro/bg/1.png")' }}
         >
           <div className="hero-inner">
             <p>MiCare 院后智慧健康管理平台</p>
@@ -104,7 +104,7 @@ export default function ProductPage() {
                     <p>{item.label}</p>
                     <p className="num-box">
                       <Image
-                        src="/assets/img/pro/two/10.png"
+                        src="/mmaicc/assets/img/pro/two/10.png"
                         alt=""
                         width={30}
                         height={30}
@@ -120,7 +120,7 @@ export default function ProductPage() {
               <div className="fl2-item fl2-item2   ">
                 <div className="fl2-lft">
                   <Image
-                    src="/assets/img/pro/two/14.png"
+                    src="/mmaicc/assets/img/pro/two/14.png"
                     alt=""
                     width={40}
                     height={40}
@@ -139,7 +139,7 @@ export default function ProductPage() {
                       <span className="stage-label">{text}</span>
                       {idx < 4 && (
                         <Image
-                          src="/assets/img/pro/two/17.png"
+                          src="/mmaicc/assets/img/pro/two/17.png"
                           alt=""
                           width={15}
                           height={15}
@@ -164,17 +164,17 @@ export default function ProductPage() {
             <div className="fl3-item">
               {[
                 {
-                  img: "/assets/img/pro/three/2_03.png",
+                  img: "/mmaicc/assets/img/pro/three/2_03.png",
                   title: "模拟通信 X NLP融合引擎",
                   desc: "听懂方言，回应患者每一份焦虑的期待",
                 },
                 {
-                  img: "/assets/img/pro/three/2_05.png",
+                  img: "/mmaicc/assets/img/pro/three/2_05.png",
                   title: "AI大模型 X 边缘计算终端",
                   desc: "实现比医生更快，比手册更准的“症状雷达”",
                 },
                 {
-                  img: "/assets/img/pro/three/2_07.png",
+                  img: "/mmaicc/assets/img/pro/three/2_07.png",
                   title: "行业独家“强制可信通话”技术",
                   desc: "让每一通电话都值得患者放心接听",
                 },
@@ -223,7 +223,7 @@ export default function ProductPage() {
                 <div className="universe-container">
                   <div className="center-logo">
                     <Image
-                      src="/assets/img/pro/four/2_03_logo.png"
+                      src="/mmaicc/assets/img/pro/four/2_03_logo.png"
                       alt="米鹊科技"
                       width={300}
                       height={300}
@@ -288,8 +288,8 @@ export default function ProductPage() {
           <div className="container split">
             <div className="media-frame">
               <video
-                src="/assets/img/pro/call.mp4"
-                poster="/assets/img/pro/poster.png"
+                src="/mmaicc/assets/img/pro/call.mp4"
+                poster="/mmaicc/assets/img/pro/poster.png"
                 controls
                 muted
                 playsInline

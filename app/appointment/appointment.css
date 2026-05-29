@@ -11,7 +11,7 @@
       rgba(10, 13, 24, 0.55),
       rgba(10, 13, 24, 0.22)
     ),
-    var(--hero-image, url(/assets/pics/bg_04.png)) top / cover no-repeat;
+    var(--hero-image, url(/mmaicc/assets/pics/bg_04.png)) top / cover no-repeat;
 }
 .appointment-inner {
   display: flex;
